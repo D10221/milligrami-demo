@@ -14,6 +14,6 @@ Start:
 
 Note: 
 
-Electron load pug's generated window from src/.  
+Electron loads pug's generated window from src/.  
 Browser loads typed "index.html".
 
