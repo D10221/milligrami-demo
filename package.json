@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p . && pug src/window.pug -o built",
+    "build:css": "node-sass ./src -o built",
+    "build:pug": "pug src/window.pug -o built",
+    "build": "tsc -p . && npm run build:css &&  npm run build:pug",
     "clean": "rimraf ./built",
     "rebuild": "npm run clean && npm run build",
     "pack": "webpack --config ./webpack.config.js",
@@ -27,6 +29,7 @@
     "@types/react-dom": "^15.5.0",
     "electron": "^1.6.10",
     "live-server": "^1.2.0",
+    "node-sass": "^4.5.3",
     "pug-cli": "^1.0.0-alpha6",
     "react-dom": "^15.5.4",
     "rimraf": "^2.6.1",
