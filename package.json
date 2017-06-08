@@ -1,22 +1,37 @@
 {
   "name": "milligrami-demo",
   "version": "0.0.0-0",
-  "description": "Milligrami Demo, Electron/Web",
+  "description": "Milligrami Demo, Electron/Browser",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p .",
+    "build": "tsc -p . && pug src/window.pug -o built",
     "clean": "rimraf ./built",
-    "rebuild": "npm run clean && npm run build"
+    "rebuild": "npm run clean && npm run build",
+    "pack": "webpack --config ./webpack.config.js",
+    "start:electron": "npm run build && electron .",
+    "start:browser": "live-server ."
   },
-  "keywords": ["milligram", "react", "milligrami", "electron", "demo", "typescript"],
+  "keywords": [
+    "milligram",
+    "react",
+    "milligrami",
+    "electron",
+    "demo",
+    "typescript"
+  ],
   "author": "D10221",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^15.0.27",
     "@types/react-dom": "^15.5.0",
     "electron": "^1.6.10",
+    "live-server": "^1.2.0",
+    "pug-cli": "^1.0.0-alpha6",
     "react-dom": "^15.5.4",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.4",
+    "webpack": "^2.6.1"
   }
 }

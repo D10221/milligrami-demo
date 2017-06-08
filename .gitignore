@@ -2,3 +2,4 @@
 **/.idea/*
 **/built/*
 **/node_modules/*
+bundle/

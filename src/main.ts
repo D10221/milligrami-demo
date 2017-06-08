@@ -16,7 +16,7 @@ app.on("ready", () => {
         }
         win.show();
     });
-    win.loadURL(`file:///${__dirname}/../window.html`);
+    win.loadURL(`file:///${__dirname}/window.html`);
 });
 app.on("window-all-closed", () => {
     app.quit();

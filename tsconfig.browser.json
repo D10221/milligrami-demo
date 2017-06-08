@@ -21,6 +21,6 @@
     "./src/**/*.tsx"
   ] ,
   "exclude": [
-    "./src/browser.tsx"
+    "./src/main.ts"
   ]
 }
