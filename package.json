@@ -1,0 +1,22 @@
+{
+  "name": "milligrami-demo",
+  "version": "0.0.0-0",
+  "description": "Milligrami Demo, Electron/Web",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p .",
+    "clean": "rimraf ./built",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "keywords": ["milligram", "react", "milligrami", "electron", "demo", "typescript"],
+  "author": "D10221",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^15.0.27",
+    "@types/react-dom": "^15.5.0",
+    "electron": "^1.6.10",
+    "react-dom": "^15.5.4",
+    "rimraf": "^2.6.1"
+  }
+}
